@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const userRoutes = require('./api/user');
-router.use('/user', userRoutes);
+router.get('/', function (req, res) {
+    res.json({ err: 'Not implemented!' });
+});
 
 module.exports = router;
