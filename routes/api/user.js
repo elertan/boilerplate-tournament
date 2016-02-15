@@ -11,4 +11,10 @@ router.get('/', function (req, res) {
     });
 });
 
+router.get('/by-email/:email', function (req, res) {
+    User.find({ email: req.params.email }, function (err, users) {
+       res.json(users); 
+    });
+});
+
 module.exports = router;
